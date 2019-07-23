@@ -1,0 +1,314 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+HTML5 display-role reset for older browsers article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**************************************************
+                   Coustom coding
+*****************************************************/
+
+.gallery-title {
+	font-family: 'Lato', sans-serif;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 2rem;
+	font-variant: small-caps;
+	margin: 2.5rem 0;
+}
+
+img {
+	max-width: 100%;
+	position: relative;
+	-webkit-transition: all 0.1s ease-in-out;
+	transition: all 0.7s ease-in-out;
+
+}
+
+#gallery a {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#gallery {
+	display: grid;
+	grid-gap: 5px;
+}
+
+/**************************************************
+                   popup screen
+*****************************************************/
+#popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(228, 241, 254, 0.9);
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	justify-content: center;
+	display: none;
+	z-index: 1;
+}
+
+#popupTitle {
+	font-size: 2rem;
+	color: black;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 2rem;
+	font-variant: small-caps;
+	padding-top: 5rem;
+	position: absolute;
+
+}
+
+
+.popupimage img {
+	max-width: 80%;
+	max-height: 60%;
+	margin-top: 10rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+/**************************************************
+                   Close button
+*****************************************************/
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #474a51;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #c4b7b7;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+
+/**************************************************
+                   Animation
+*****************************************************/
+
+.animation {
+	animation-name: bounce;
+	animation-duration: 0.3s;
+}
+
+@keyframes bounce {
+	from {
+		transform: scale(0)
+	}
+
+	to {
+		transform: scale(1)
+	}
+}
+
+
+
+.mask {
+	overflow: hidden;
+}
+
+.mask img:hover {
+	transform: scale(1.1)
+}
+
+/**************************************************
+                 Tablet view
+*****************************************************/
+
+@media screen and (min-width: 35rem) {
+
+	.gallery-title {
+		font-size: 2.5rem;
+	}
+
+	#gallery {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 10px;
+		max-width: 40rem;
+		margin: auto;
+	}
+}
+
+/**************************************************
+                   laptop view or any other 
+*****************************************************/
+
+
+
+@media screen and (min-width: 50rem) {
+	.gallery-title {
+		font-size: 3rem;
+	}
+
+	#gallery {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 10px;
+		max-width: 55rem;
+		margin: auto;
+	}
+}
+
+
+
+/**************************************************
+                   desktop view 
+*****************************************************/
+
+@media screen and (min-width: 60rem) {
+	.gallery-title {
+		font-size: 3.5rem;
+	}
+
+	#gallery {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 10px;
+		max-width: 65rem;
+		margin: auto;
+
+	}
+}
